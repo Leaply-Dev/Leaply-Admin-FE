@@ -1,0 +1,30 @@
+
+> leaply-admin-fe@0.1.0 build
+> next build
+
+   ▲ Next.js 15.5.9
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 4.0s
+   Linting and checking validity of types ...
+
+./app/universities/page.tsx
+155:57  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
+   Collecting page data ...
+   Generating static pages (0/10) ...
+ ⨯ useSearchParams() should be wrapped in a suspense boundary at page "/programs". Read more: https://nextjs.org/docs/messages/missing-suspense-with-csr-bailout
+    at g (/home/keishi/Code/Leaply/Leaply-Admin/leaply-admin-fe/.next/server/chunks/367.js:1:95891)
+    at m (/home/keishi/Code/Leaply/Leaply-Admin/leaply-admin-fe/.next/server/chunks/367.js:9:17532)
+    at H (/home/keishi/Code/Leaply/Leaply-Admin/leaply-admin-fe/.next/server/app/programs/page.js:1:6017)
+    at n3 (/home/keishi/Code/Leaply/Leaply-Admin/leaply-admin-fe/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:2:82831)
+    at n6 (/home/keishi/Code/Leaply/Leaply-Admin/leaply-admin-fe/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:2:84601)
+    at n5 (/home/keishi/Code/Leaply/Leaply-Admin/leaply-admin-fe/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:2:104801)
+    at n7 (/home/keishi/Code/Leaply/Leaply-Admin/leaply-admin-fe/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:2:102219)
+    at n8 (/home/keishi/Code/Leaply/Leaply-Admin/leaply-admin-fe/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:2:83183)
+    at n6 (/home/keishi/Code/Leaply/Leaply-Admin/leaply-admin-fe/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:2:84647)
+    at n6 (/home/keishi/Code/Leaply/Leaply-Admin/leaply-admin-fe/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:2:101560)
+Error occurred prerendering page "/programs". Read more: https://nextjs.org/docs/messages/prerender-error
+Export encountered an error on /programs/page: /programs, exiting the build.
+ ⨯ Next.js build worker exited with code: 1 and signal: null

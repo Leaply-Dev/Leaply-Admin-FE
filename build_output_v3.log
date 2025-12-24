@@ -1,0 +1,88 @@
+
+> leaply-admin-fe@0.1.0 build
+> next build
+
+   ▲ Next.js 15.5.9
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 3.7s
+   Linting and checking validity of types ...
+
+   We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+   The following mandatory changes were made to your tsconfig.json:
+
+   	- jsx was set to preserve (next.js implements its own optimized jsx transform)
+
+
+Failed to compile.
+
+./app/dashboard/page.tsx
+7:5  Warning: 'TrendingUp' is defined but never used.  @typescript-eslint/no-unused-vars
+54:101  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+54:108  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./app/login/page.tsx
+30:11  Warning: 'router' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+47:25  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./app/programs/page.tsx
+6:54  Warning: 'Filter' is defined but never used.  @typescript-eslint/no-unused-vars
+50:58  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+72:51  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+77:34  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+162:63  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./app/universities/page.tsx
+28:5  Warning: 'DialogTrigger' is defined but never used.  @typescript-eslint/no-unused-vars
+48:64  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+70:59  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+75:37  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+150:67  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+155:57  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./app/users/page.tsx
+5:18  Warning: 'Trash2' is defined but never used.  @typescript-eslint/no-unused-vars
+54:45  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+124:60  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./components/layout/Sidebar.tsx
+13:5  Warning: 'Menu' is defined but never used.  @typescript-eslint/no-unused-vars
+26:5  Warning: 'SidebarTrigger' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./components/programs/ProgramForm.tsx
+47:19  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+94:26  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+99:55  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+99:72  Warning: Compilation Skipped: Use of incompatible library
+
+This API returns functions which cannot be memoized without leading to stale UI. To prevent this, by default React Compiler will skip memoizing this component/hook. However, you may see issues if values from this API are passed to other components/hooks that are memoized.
+
+/home/keishi/Code/Leaply/Leaply-Admin/leaply-admin-fe/components/programs/ProgramForm.tsx:99:72
+   97 |     });
+   98 |
+>  99 |     const selectedUniversity = universities?.find((u: any) => u.id === form.watch('university_id'));
+      |                                                                        ^^^^ React Hook Form's `useForm()` API returns a `watch()` function which cannot be memoized safely.
+  100 |
+  101 |     return (
+  102 |         <Form {...form}>  react-hooks/incompatible-library
+118:64  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./components/ui/sidebar.tsx
+611:26  Error: Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+/home/keishi/Code/Leaply/Leaply-Admin/leaply-admin-fe/components/ui/sidebar.tsx:611:26
+  609 |   // Random width between 50 to 90%.
+  610 |   const width = React.useMemo(() => {
+> 611 |     return `${Math.floor(Math.random() * 40) + 50}%`
+      |                          ^^^^^^^^^^^^^ Cannot call impure function
+  612 |   }, [])
+  613 |
+  614 |   return (  react-hooks/purity
+
+./components/universities/UniversityForm.tsx
+40:19  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+77:26  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
